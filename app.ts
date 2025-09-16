@@ -82,4 +82,9 @@ let u: undefined = undefined;
 let n: null = null;
 
 
+// Introduction to type Inference & type Annotations
 
+// Defination of Type Inference - Type Inference is the ability of TypeScript to automatically deduce the type of a variable based on its value.
+let inferredString = "This is a string"; // Hover over inferredString to see its type is string
+let inferredNumber = 42; // Hover over inferredNumber to see its type is number
+let inferredBoolean = true; // Hover over inferredBoolean to see its type is boolean

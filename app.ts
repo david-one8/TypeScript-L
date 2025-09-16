@@ -82,7 +82,7 @@ let u: undefined = undefined;
 let n: null = null;
 
 
-// Introduction to type Inference & type Annotations
+// # Introduction to type Inference & type Annotations
 
 // Defination of Type Inference - Type Inference is the ability of TypeScript to automatically deduce the type of a variable based on its value.
 let inferredString = "This is a string"; // Hover over inferredString to see its type is string
@@ -93,3 +93,24 @@ let inferredBoolean = true; // Hover over inferredBoolean to see its type is boo
 let annotatedString: string = "This is a string"; 
 let annotatedNumber: number = 42; 
 let annotatedBoolean: boolean = true;
+
+
+// # Introduction to Interfaces 
+
+// Defination of Interface - An interface is a syntactical contract that an entity should conform to. In TypeScript, interfaces define the shape of an object.
+interface Person {
+    name: string;
+    age: number;
+    gender?: string; // Optional property
+}
+
+function greet(person: Person) {
+
+}
+
+greet({name: "John", age: 30}); // OK
+greet({name: "Jane", age: 25, gender: "female"}); // OK
+greet({name: "Alice"}); // Error: Property 'age' is missing in type '{ name: string; }' but required in type 'Person'.
+greet({age: 30}); // Error: Property 'name' is missing in type '{ age: number; }' but required in type 'Person'.
+
+

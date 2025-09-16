@@ -25,7 +25,30 @@ let tuple = [1, "two", true];
 // wrong tuple examples
 let wrongTuple1 = [1, 2, true]; // Error: Type 'number' is not assignable to type 'string'.
 let wrongTuple2 = [1, false, "two"]; // Error: Source has 2 element(s) but target requires 3.
-// Enums in TypeScript
+// Enums in TypeScript - An enum is a special "class" that represents a group of constants (unchangeable variables).
+var UserRoles;
+(function (UserRoles) {
+    UserRoles["Admin"] = "admin";
+    UserRoles["User"] = "user";
+    UserRoles["Guest"] = "guest";
+    UserRoles["SuperAdmin"] = "superadmin";
+})(UserRoles || (UserRoles = {}));
+let userRole = UserRoles.Admin;
+var Directions;
+(function (Directions) {
+    Directions[Directions["Up"] = 1] = "Up";
+    Directions[Directions["Down"] = 2] = "Down";
+    Directions[Directions["Left"] = 3] = "Left";
+    Directions[Directions["Right"] = 4] = "Right";
+})(Directions || (Directions = {}));
+let direction = Directions.Up;
+var StatusCodes;
+(function (StatusCodes) {
+    StatusCodes[StatusCodes["Success"] = 200] = "Success";
+    StatusCodes[StatusCodes["NotFound"] = 404] = "NotFound";
+    StatusCodes[StatusCodes["ServerError"] = 500] = "ServerError";
+})(StatusCodes || (StatusCodes = {}));
+let statusCode = StatusCodes.Success;
 // Any type in TypeScript
 // Void type in TypeScript
 // Never type in TypeScript

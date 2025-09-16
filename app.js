@@ -20,7 +20,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 let numbers = [1, 2, 3, 4, 5];
 let strings = ["one", "two", "three"];
 let booleans = [true, false, true];
-// Tuples in TypeScript
+// Tuples in TypeScript - A tuple is a special type of array that can hold a fixed number of elements of different types.
+let tuple = [1, "two", true];
+// wrong tuple examples
+let wrongTuple1 = [1, 2, true]; // Error: Type 'number' is not assignable to type 'string'.
+let wrongTuple2 = [1, false, "two"]; // Error: Source has 2 element(s) but target requires 3.
 // Enums in TypeScript
 // Any type in TypeScript
 // Void type in TypeScript

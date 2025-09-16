@@ -98,19 +98,37 @@ let annotatedBoolean: boolean = true;
 // # Introduction to Interfaces 
 
 // Defination of Interface - An interface is a syntactical contract that an entity should conform to. In TypeScript, interfaces define the shape of an object.
-interface Person {
+interface User {
     name: string;
-    age: number;
+    email: string;
     gender?: string; // Optional property
 }
 
-function greet(person: Person) {
+function abcd (user: User) {
 
 }
 
-greet({name: "John", age: 30}); // OK
-greet({name: "Jane", age: 25, gender: "female"}); // OK
-greet({name: "Alice"}); // Error: Property 'age' is missing in type '{ name: string; }' but required in type 'Person'.
-greet({age: 30}); // Error: Property 'name' is missing in type '{ age: number; }' but required in type 'Person'.
+abcd({name: "John", email: "john@example.com"}); // OK
+abcd({name: "Jane", email: "jane@example.com", gender: "female"}); // OK
+// Error: Property 'name' is missing in type '{ age: number; }' but required in type 'User'.
 
 
+
+// # Extending Interfaces
+interface User {
+    name: string;
+    email: string;
+    gender?: string; // Optional property
+}
+
+interface Admin extends User {  // In simple words, Admin is a User with additional properties
+    admin: boolean; // Admin property is mandatory for Admin interface
+}
+
+function xyz(user: Admin) { // Function that takes an Admin type object as parameter
+
+}
+
+xyz({name: "Alice", email: "alice@example.com", admin: true}); // OK
+xyz({name: "Bob", email: "bob@example.com", admin: false}); // OK
+xyz({name: "Charlie"}) // Error: Property 'email' is missing in type '{ name: string; }' but required in type 'Admin'.

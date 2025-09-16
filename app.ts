@@ -1,5 +1,7 @@
 //Basic Data Types
-// Primitive types
+// Primitive types definations
+// - A primitive type is a data type that is not an object and has no methods.
+// - Primitive types are immutable, meaning their values cannot be changed once they are created.
 // - number
 // - string
 // - boolean
@@ -7,7 +9,9 @@
 // - undefined
 // - symbol
 
-// Reference types
+// Reference types definations
+// - A reference type is a data type that is an object and has methods.
+// - Reference types are mutable, meaning their values can be changed after they are created.
 // - object
 // - array
 // - function

@@ -51,7 +51,11 @@ enum StatusCodes{
     ServerError = 500
 }
 let statusCode: StatusCodes = StatusCodes.Success;
+
+
 // Any type in TypeScript
+let a;  // a is of type any because it is not initialized and no type is specified so it is by defaults to any
+
 
 // Void type in TypeScript
 

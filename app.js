@@ -17,6 +17,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // - array
 // - function
 // Arrays in TypeScript
+let numbers = [1, 2, 3, 4, 5];
+let strings = ["one", "two", "three"];
+let booleans = [true, false, true];
 // Tuples in TypeScript
 // Enums in TypeScript
 // Any type in TypeScript

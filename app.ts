@@ -17,6 +17,9 @@
 // - function
 
 // Arrays in TypeScript
+let numbers: number[] = [1, 2, 3, 4, 5];
+let strings: string[] = ["one", "two", "three"];
+let booleans: boolean[] = [true, false, true];
 
 // Tuples in TypeScript
 

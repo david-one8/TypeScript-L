@@ -88,3 +88,8 @@ let n: null = null;
 let inferredString = "This is a string"; // Hover over inferredString to see its type is string
 let inferredNumber = 42; // Hover over inferredNumber to see its type is number
 let inferredBoolean = true; // Hover over inferredBoolean to see its type is boolean
+
+// Defination of Type Annotations - Type Annotations is the ability of TypeScript to explicitly specify the type of a variable.
+let annotatedString: string = "This is a string"; 
+let annotatedNumber: number = 42; 
+let annotatedBoolean: boolean = true;

@@ -67,12 +67,19 @@ b = "World"; // OK
 b = false; // OK
 
 // Void type in TypeScript
+function logMessage(message: string): void {
+    console.log(message);
+}
+
 
 // Never type in TypeScript
+function throwError(message: string): never {
+    throw new Error(message);
+}
 
 // Undefined and Null types in TypeScript
-
-
+let u: undefined = undefined;
+let n: null = null;
 
 
 

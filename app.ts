@@ -57,13 +57,22 @@ let statusCode: StatusCodes = StatusCodes.Success;
 let a;  // a is of type any because it is not initialized and no type is specified so it is by defaults to any
 
 
+// Unknown type in TypeScript 
+let b: unknown;  // b is of type unknown because it is not initialized and no type is specified so it is by defaults to unknown
+a = 10; // OK
+a = "Hello"; // OK
+a = true; // OK 
+b = 20; // OK
+b = "World"; // OK
+b = false; // OK
+
 // Void type in TypeScript
 
 // Never type in TypeScript
 
 // Undefined and Null types in TypeScript
 
-// Unknown type in TypeScript 
+
 
 
 

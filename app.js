@@ -1,4 +1,3 @@
-"use strict";
 //Basic Data Types
 // Primitive types definations
 // - A primitive type is a data type that is not an object and has no methods.
@@ -9,7 +8,6 @@
 // - null
 // - undefined
 // - symbol
-Object.defineProperty(exports, "__esModule", { value: true });
 // Reference types definations
 // - A reference type is a data type that is an object and has methods.
 // - Reference types are mutable, meaning their values can be changed after they are created.
@@ -113,8 +111,17 @@ class Device {
 let d1 = new Device();
 // # Constructors in TypeScript Classes
 class BottleMaker {
+    brand;
+    material;
+    price;
+    color;
     constructor(brand, material, price, color) {
+        this.brand = brand;
+        this.material = material;
+        this.price = price;
+        this.color = color;
     }
 }
 let b1 = new BottleMaker('camel', 'plastic', 200, 'blue');
+export {};
 //# sourceMappingURL=app.js.map

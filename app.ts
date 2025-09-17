@@ -178,9 +178,8 @@ class Device {
 let d1 = new Device();
 
 // # Constructors in TypeScript Classes
-
 class BottleMaker{
-    constructor(brand: string, material: string, price: number, color: string){
+    constructor(public brand: string, public material: string, public price: number, public color: string){
 
     }
 }

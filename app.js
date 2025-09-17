@@ -111,4 +111,10 @@ class Device {
     price = 110000;
 }
 let d1 = new Device();
+// # Constructors in TypeScript Classes
+class BottleMaker {
+    constructor(brand, material, price, color) {
+    }
+}
+let b1 = new BottleMaker('camel', 'plastic', 200, 'blue');
 //# sourceMappingURL=app.js.map

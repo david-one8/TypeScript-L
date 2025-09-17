@@ -25,8 +25,8 @@ let booleans: boolean[] = [true, false, true];
 let tuple: [number, string, boolean] = [1, "two", true];
 
 // wrong tuple examples
-let wrongTuple1: [number, string, boolean] = [1, 2, true]; // Error: Type 'number' is not assignable to type 'string'.
-let wrongTuple2: [number, string, boolean] = [1, false, "two"]; // Error: Source has 2 element(s) but target requires 3.
+// wrong tuple examples
+// let wrongTuple1: [number, string, boolean] = [1, 2, true]; // Error: Type 'number' is not assignable to type 'string'.
 
 // Enums in TypeScript - An enum is a special "class" that represents a group of constants (unchangeable variables).
 enum UserRoles{
@@ -50,6 +50,7 @@ enum StatusCodes{
     NotFound = 404,
     ServerError = 500
 }
+
 let statusCode: StatusCodes = StatusCodes.Success;
 
 
@@ -131,7 +132,7 @@ function xyz(user: Admin) { // Function that takes an Admin type object as param
 
 xyz({name: "Alice", email: "alice@example.com", admin: true}); // OK
 xyz({name: "Bob", email: "bob@example.com", admin: false}); // OK
-xyz({name: "Charlie"}) // Error: Property 'email' is missing in type '{ name: string; }' but required in type 'Admin'.
+xyz({name: "Bob", email: "bob@example.com", admin: false}); // OK
 
 
 // # Type Aliases
@@ -143,7 +144,8 @@ type ID = string | number; // ID can be either string or number
 let userId: ID;
 
 
-// Union and Intersection Types
+
+// # Union and Intersection Types 
 // Union Type - A union type is a type that can be one of several types. It is defined using the pipe (|) operator.
 let unionType: string | number;
 
@@ -153,3 +155,24 @@ let user: { id: number; name: string } = { id: 1, name: "John" }; // OK
 // let wrongUser: { id: number } = { id: 1 }; // Error: Property 'name' is missing in type '{ id: number; }' but required in type '{ id: number; name: string; }'.      
 
 
+
+// # Fundamental of Classes & Objects in TypeScript
+
+class Person {
+   name = "John Doe"; // Property with default value
+   age = 30; // Property without default value
+   gender = "male"; // Property with default value
+}
+
+let p1 = new Person(); // Creating an instance of Person class
+let p2 = new Person(); // Creating another instance of Person class
+
+
+class Device {
+    company = "Apple";
+    model = "iPhone 16";
+    year = 2024;
+    price = 110000;
+}
+
+let d1 = new Device();

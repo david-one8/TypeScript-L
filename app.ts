@@ -143,5 +143,13 @@ type ID = string | number; // ID can be either string or number
 let userId: ID;
 
 
-// Unioun and Intersection Types
+// Union and Intersection Types
+// Union Type - A union type is a type that can be one of several types. It is defined using the pipe (|) operator.
+let unionType: string | number;
+
+// Intersection Type - An intersection type is a type that combines multiple types into one. It is defined using the ampersand (&) operator.
+let intersectionType: { id: number } & { name: string };
+let user: { id: number; name: string } = { id: 1, name: "John" }; // OK
+// let wrongUser: { id: number } = { id: 1 }; // Error: Property 'name' is missing in type '{ id: number; }' but required in type '{ id: number; name: string; }'.      
+
 

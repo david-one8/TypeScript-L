@@ -132,3 +132,16 @@ function xyz(user: Admin) { // Function that takes an Admin type object as param
 xyz({name: "Alice", email: "alice@example.com", admin: true}); // OK
 xyz({name: "Bob", email: "bob@example.com", admin: false}); // OK
 xyz({name: "Charlie"}) // Error: Property 'email' is missing in type '{ name: string; }' but required in type 'Admin'.
+
+
+// # Type Aliases
+// Defination of Type Alias - User can create custom names for any data type using type alias.
+
+//1
+type ID = string | number; // ID can be either string or number
+
+let userId: ID;
+
+
+// Unioun and Intersection Types
+
